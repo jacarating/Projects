@@ -4,7 +4,9 @@
 
 class Colour {
 	char* colourName;
-public:	Colour() {		colourName = nullptr;	}	
+public:	Colour() {
+	colourName = nullptr;	
+}	
 
 Colour(const char* str) {
 		colourName = new char[strlen(str)+1];
@@ -30,15 +32,13 @@ class Car {
 	char* name;
 	int year;
 public:	Car() {
-
 		name = nullptr;
-
-		year = 0;	}	
+		year = 0;
+}	
 
 Car(const char* str, int recYear, const char* recCol) {
 
 		name = new char[strlen(str)+1];
-
 		strcpy(name, str);
 		subObject.Set(recCol);
 		year = recYear;
@@ -50,7 +50,10 @@ Car(const char* str, int recYear, const char* recCol) {
 	}
 
 
-	void display() {		std::cout << name << ' ' << year << ' ';		subObject.display();	}
+	void display() {
+		std::cout << name << ' ' << year << ' ';
+		subObject.display();
+	}
 	
 
 ~Car() { delete[] name; }
